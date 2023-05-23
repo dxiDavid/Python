@@ -1,6 +1,4 @@
+randomString = str("Hello World")
+randomNumber = int(50)
 
-def fun():{
-    print ("Hello World")
-}
-
-fun()
+print(randomString, randomNumber)
