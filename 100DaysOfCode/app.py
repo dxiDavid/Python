@@ -11,3 +11,4 @@ print(randomString[6:12].upper(), randomString.replace("o", "0").capitalize())
 
 formatString = f"Hello World string with some random words and a number which is {randomNumber}"
 print(formatString)
+
