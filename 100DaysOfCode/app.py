@@ -1,16 +1,9 @@
-listOne = [34, 15, 88, 2]
-listTwo = [34, -345, -1, 100]
-listThree = []
+myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+new_array = [2, 2]
 
-def find_smallest_int(listOfIntegers):
-    listOfIntegers.sort()
+def loop_and_square(array):
 
-    if len(listOfIntegers) == 0:
-        print("List is empty")
-    else:
-        print(listOfIntegers)
+    squared_list = [x**2 for x in array]
+    print(sum(squared_list))
 
-
-find_smallest_int(listOne)
-find_smallest_int(listTwo)
-find_smallest_int(listThree)
+loop_and_square(new_array)
