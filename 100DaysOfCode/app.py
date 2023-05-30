@@ -6,4 +6,5 @@ def loop_and_square(array):
     squared_list = [x**2 for x in array]
     print(sum(squared_list))
 
+
 loop_and_square(new_array)
