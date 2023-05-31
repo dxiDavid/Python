@@ -1,9 +1,27 @@
-myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-new_array = [2, 2]
+def convert_to_number(string):
+    converted_number = None
 
-def loop_and_square(array):
+    if "." in string:
+        converted_number = float(string)
+        print(converted_number)
+    else:
+        converted_number = int(string)
+        print(converted_number)
 
-    squared_list = [x**2 for x in array]
-    print(sum(squared_list))
+    return converted_number
 
-loop_and_square(new_array)
+def negate(number):
+
+    number_to_convert = number
+
+    if number_to_convert < 0:
+        print(number_to_convert, "is already negative")
+    else:
+       number_to_convert = number - number*2
+
+    return number_to_convert
+
+def greet(user_name):
+    user_name = input("what is your name")
+    return f"Hello, {user_name} how are you doing today?"
+
