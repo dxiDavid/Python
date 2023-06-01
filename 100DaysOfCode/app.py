@@ -1,27 +1,30 @@
-def convert_to_number(string):
-    converted_number = None
 
-    if "." in string:
-        converted_number = float(string)
-        print(converted_number)
+"""
+
+def simple_multiplication(number):
+    number_var = None
+
+    if number % 2 == 0:
+        number_var = number * 8
     else:
-        converted_number = int(string)
-        print(converted_number)
+        number_var = number * 9
 
-    return converted_number
+    return number_var
 
-def negate(number):
+"""
 
-    number_to_convert = number
-
-    if number_to_convert < 0:
-        print(number_to_convert, "is already negative")
+def reverse_seq(n):
+    if n is None or n <= 0:
+        return 0
     else:
-       number_to_convert = number - number*2
+        numbers_list = [n]
 
-    return number_to_convert
+        while numbers_list[-1] != 1:
+            number = numbers_list[-1] - 1
+            numbers_list.append(number)
 
-def greet(user_name):
-    user_name = input("what is your name")
-    return f"Hello, {user_name} how are you doing today?"
+        #return numbers_list
+        print(numbers_list)
 
+
+reverse_seq(8)
