@@ -1,30 +1,35 @@
+myArray = ["Keep", "Remove", "Keep", "Remove", "Keep"]
 
-"""
 
-def simple_multiplication(number):
-    number_var = None
+def remove_every_other(array):
 
-    if number % 2 == 0:
-        number_var = number * 8
-    else:
-        number_var = number * 9
-
-    return number_var
-
-"""
-
-def reverse_seq(n):
-    if n is None or n <= 0:
+    if array is None or len(array) == 0:
         return 0
     else:
-        numbers_list = [n]
-
-        while numbers_list[-1] != 1:
-            number = numbers_list[-1] - 1
-            numbers_list.append(number)
-
-        #return numbers_list
-        print(numbers_list)
+        every_other = array[::2]
+        return every_other
 
 
-reverse_seq(8)
+def check(seq, elem):
+    if seq is None and elem is None:
+        return 0
+    elif elem in seq:
+        return True
+    else:
+        return False
+
+def zero_fuel(distance_to_pump, mpg, fuel_left):
+
+    distance_limit = fuel_left * mpg
+
+    if distance_limit < distance_to_pump:
+        return False
+    else:
+        return True
+
+def to_jaden_case(string):
+    return string.title()
+
+
+
+
