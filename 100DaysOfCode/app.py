@@ -1,53 +1,21 @@
-import math
-import re
+str_1 = "adfghjklmbcezxvnsopyq"
+str_2 = ""
 
-def is_square(num):
+def printer_error(s):
+    errors = []
+    length = len(s)
 
-    if num < 0:
-        return False
+    for x in s:
+        if ord("a") <= ord(x) <= ord("m"):
+            continue
+        errors.append(x)
+    return f"{len(errors)}/{length}"
+
+def is_triangle(a, b, c):
+    if (a == 0 or a is None) or (b == 0 or b is None) or (c == 0 or c is None):
+        return 0
     else:
-        square_root = int(math.sqrt(num))
-
-        if square_root ** 2 == num:
+        if (a + b > c) and (b + c > a) and (c + a > b):
             return True
         else:
             return False
-
-
-
-is_square(77)
-
-def descending_order(num):
-    if num is None or num <= 0:
-        return 0
-    else:
-        digits = list(map(int, str(num)))
-        digits.sort()
-        digits.reverse()
-
-        string_list = list(map(str, digits))
-        joined_string = "".join(string_list)
-
-        return int(joined_string)
-
-
-my_string = 'double  spaced  words'
-def reverse_words(text):
-
-    separator = r"\s+"
-    reversed_words = []
-
-    matches = re.findall(separator, text)
-    if matches:
-        separator = matches[0]
-
-    word_list = re.split(separator, text)
-
-    for word in word_list:
-        reversed_word = word[::-1]
-        reversed_words.append(reversed_word)
-
-    print(separator.join(reversed_words))
-    return separator.join(reversed_words)
-
-reverse_words(my_string)
