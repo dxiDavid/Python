@@ -1,21 +1,14 @@
-str_1 = "adfghjklmbcezxvnsopyq"
-str_2 = ""
+import re
+def disemvowel(string):
 
-def printer_error(s):
-    errors = []
-    length = len(s)
+    return "".join([x for x in string if not re.findall('[aeiouAEIOU]', x)])
 
-    for x in s:
-        if ord("a") <= ord(x) <= ord("m"):
-            continue
-        errors.append(x)
-    return f"{len(errors)}/{length}"
+def high_and_low(numbers):
+    num_str_list = numbers.split(" ")
+    num_list = [int(x) for x in num_str_list]
+    num_list.sort()
 
-def is_triangle(a, b, c):
-    if (a == 0 or a is None) or (b == 0 or b is None) or (c == 0 or c is None):
-        return 0
-    else:
-        if (a + b > c) and (b + c > a) and (c + a > b):
-            return True
-        else:
-            return False
+    return f"{num_list[-1]} {num_list[0]}"
+
+
+high_and_low("1 2 6 4 5 3 11 8")
