@@ -1,14 +1,12 @@
-import re
-def disemvowel(string):
+def count_bits(n):
+    bin_string = bin(n)
+    ones = []
+    bin_list = [x for x in bin_string]
 
-    return "".join([x for x in string if not re.findall('[aeiouAEIOU]', x)])
+    for item in bin_list:
+        if item == "1":
+            ones.append(item)
 
-def high_and_low(numbers):
-    num_str_list = numbers.split(" ")
-    num_list = [int(x) for x in num_str_list]
-    num_list.sort()
+    return len(ones)
 
-    return f"{num_list[-1]} {num_list[0]}"
-
-
-high_and_low("1 2 6 4 5 3 11 8")
+count_bits(5)
