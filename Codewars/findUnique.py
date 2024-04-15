@@ -1,0 +1,10 @@
+def find_uniq(arr):
+    arr.sort()
+
+    if arr[0] == arr[1]:
+        return arr[-1]
+    else:
+        return arr[0]
+
+x = [5, 5, 5, 4, 5, 5]
+find_uniq(x)
